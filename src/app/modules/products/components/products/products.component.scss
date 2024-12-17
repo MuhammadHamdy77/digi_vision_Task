@@ -4,18 +4,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 20px 0;
     button {
-        background-color: #f0f0f0;
-        border: 1px solid #ddd;
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
         padding: 8px 12px;
         margin: 0 5px;
         cursor: pointer;
         border-radius: 4px;
         &.active {
-            background-color: #007bff;
+            background-color: #009999;
             color: white;
-            border: 1px solid #007bff;
+            border: 1px solid #009999;
       }
       &.disabled {
         background-color: #ccc;
