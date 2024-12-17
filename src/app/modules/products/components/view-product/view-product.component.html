@@ -1,0 +1,22 @@
+<div class="container">
+  <section class="prod-list" *ngIf="product; else notFound">
+    <div class="prod-item single">
+      <img [src]="product.image" alt="{{ product.title }}" />
+      <div class="content-prod">
+          <h2>{{ product.title }}</h2>
+          <p>{{ product.description }}</p>
+          <p><span class="badge bg-warning">Price: </span>{{ product.price }}$</p>
+          <a class="btn btn-outline-primary" routerLink="/products">Back to Products</a>
+      </div>
+    </div>
+  </section>
+  
+</div>
+
+
+<ng-template #notFound>
+  <div class="alert alert-warning text-center">
+    Product not found!
+  </div>
+  <a class="btn btn-outline-info" routerLink="/">Back to Products</a>
+</ng-template>

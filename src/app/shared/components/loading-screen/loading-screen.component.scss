@@ -1,0 +1,134 @@
+:host {
+	.loading-spinner {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(255, 255, 255, 1);
+		z-index: 2025;
+
+		&.solid-bg {
+			background-color: rgba(255, 255, 255, 1);
+		}
+
+		&__logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40rem;
+			height: 40rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			user-select: none;
+			img{
+				user-select: none;
+			}
+		}
+	}
+
+	@media all and (max-width:1440px){
+		.loading-spinner{
+			&__logo{
+				width: 30rem;
+				height: 30rem;
+			}
+		}
+	}
+
+	@media all and (max-width: 767px) {
+		#splash-screen__logo {
+			width: 250px;
+			height: 250px;
+		}
+		.loading-spinner{
+			&__logo{
+				width: 20rem;
+				height: 20rem;
+			}
+		}
+	}
+}
+
+
+
+
+.splash-logo {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	position: absolute;
+	width: 80px;
+  }
+  
+  .splash-loader,
+  .splash-loader:before,
+  .splash-loader:after {
+	left: 50%;
+	top: 50%;
+	margin-left: -60px;
+	margin-top: -60px;
+	position: absolute;
+	vertical-align: middle;
+	// background: linear-gradient(130deg, #4062AD 20.17%, #0A925D 77.86%, #0A925D 77.93%);
+    background: linear-gradient(301.09deg, #009999 24.19%, #DFDD68 352.04%);
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	z-index: 1;
+  }
+  
+  .splash-loader {
+	background: transparent;
+  }
+  
+  .splash-loader:before {
+	content: "";
+	animation: bounce 1.5s infinite;
+  }
+  .splash-loader:after {
+	content: "";
+	animation: bounce 1.5s -0.4s infinite;
+  }
+  
+  @keyframes bounce {
+	0% {
+	  transform: scale(0.3);
+	  -webkit-transform: scale(0.3);
+	  opacity: 1;
+	}
+	100% {
+	  transform: scale(2);
+	  -webkit-transform: scale(2);
+	  opacity: 0;
+	}
+  }
+  
+  @-webkit-keyframes bounce {
+	0% {
+	  transform: scale(0.3);
+	  -webkit-transform: scale(0.3);
+	  opacity: 1;
+	}
+	100% {
+	  transform: scale(2);
+	  -webkit-transform: scale(2);
+	  opacity: 0;
+	}
+  }
+  
+  .splash-screen {
+	background-color: rgba(0,0,0,0.6);
+	height: 100%;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	z-index: 3000;
+  }
+  
